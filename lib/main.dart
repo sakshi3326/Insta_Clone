@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insta/utils/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Instagram clone',
-      theme: ThemeData.dark(),
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: mobileBackgroundColor,
+      ),
       home: Scaffold(body: Text('lets build insta clone')),
     );
   }
